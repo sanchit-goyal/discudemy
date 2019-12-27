@@ -33,9 +33,11 @@ def get_obj_from_set(_data):
     return disc_udemy_list
 
 
+
+__SEARCH_KEY__ = 'GOLANG'
 if __name__ == '__main__':
     # fix_files()
     data = get_obj_from_set(IO.deserialize_from_file())
     for _ in data:
-        if _.name.find('go') > 0:
+        if _.name.upper().find(__SEARCH_KEY__) > -1:
             print(_)
