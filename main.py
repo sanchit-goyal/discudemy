@@ -18,7 +18,7 @@ def fix_files():
     _data = set(for_page_threading())
     IO.serialize_to_file(_data)
     IO.write_to_json_file(_data)
-    IO.write_to_csv_file(get_obj_repr_from_set(_data))
+    IO.write_to_csv_file(get_obj_from_set(_data))
 
 
 def get_obj_from_set(_data):
@@ -33,8 +33,7 @@ def get_obj_from_set(_data):
     return disc_udemy_list
 
 
-
-__SEARCH_KEY__ = 'GOLANG'
+__SEARCH_KEY__ = 'JAVA'
 if __name__ == '__main__':
     # fix_files()
     data = get_obj_from_set(IO.deserialize_from_file())
